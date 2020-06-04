@@ -1,0 +1,64 @@
+PART 1 - MPG Regression
+
+Exploratoy Multiple Linear Regression:
+		Estimate:		Std. Error:	t value:	     Pr(>|t|):
+(Intercept)              	 -1.040e+02  	1.585e+01 	 -6.559 	     5.08e-08 ***
+vehicle.length         	6.267e+00  	6.553e-01   	9.563 	     2.60e-12 ***
+vehicle.weight        	1.245e-03  	6.890e-04   	1.807   	     0.0776 .  
+spoiler.angle           	6.877e-02  	6.653e-02   	1.034   	     0.3069    
+ground.clearance   	3.546e+00  	5.412e-01   	6.551 	     5.21e-08 ***
+AWD                         	 -3.411e+00  	2.535e+00 	 -1.346   	     0.1852    
+
+Results of Statistically Significant Multiple Regression:
+		Estimate:		Std. Error:	t value:	     Pr(>|t|):
+(Intercept)              	 -91.5573  	13.9649	 	 -6.556 	     3.86e-08 ***
+vehicle.length         	6.0811	  	0.6732	   	9.033 	     7.68e-12 ***
+ground.clearance   	3.5669	  	5.401	   	6.604 	     3.26e-08 ***
+
+  
+Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+
+Summary 1: 
+
+Excluding the intercept p-value which tests the hypothesis that the intercept is 0,  vehicle.length, and ground.clearance are below the 0.05 threshold of our null hypothesis which indicates a non-random amount of variance. Therefore, vehicle.length and ground.clearance have been selected as the coefficients to use in the multiple linear regression.
+   
+Question 2:
+
+Is the slope of the linear model considered to be zero? Why or why not?
+
+Summary 2:
+
+This model shows slope estimates of 6.08 and 3.57. Additionally, the p value represents the hypothesis test that the slope is zero. With a p-value well below 0.05, the null hypothesis can be rejected, statistically supporting the conclusion that the slope is not considered to be zero. 
+
+Question 3:
+
+Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+
+Summary 3:
+
+The model effectively predicts a trend in the data, however, with the coefficient of multiple determination value only being 0.67, it falls short of predicting the variability of mpg for MechaCar prototypes with a high degree of accuracy. This is likely because there are additional factors that contribute to a vehicles fuel efficiency that are not present in this dataset. It would be advisable to conduct future multiple linear regressions with additional data such as a vehicle’s coefficient of aerodynamic drag, or the coefficient of kinetic friction for a vehicle’s tires. 
+
+PART 2 - Suspension Coil Summary
+
+Using the pastect packages’ stat.desc() function on the PSI variable, it was found that the current manufacturing data meets the design specification with a  standard deviation of 7.892, which when squared provides the variance of 62.29, falling within the allowable variance of 100 PSI from the mean. 
+
+PART 3 - Suspension Coil T-Test
+
+For the suspension coil t-test, a random sample of 50 PSI values was selected and found to have a t-value of 2.2367 and p-value of 0.03. The p-value is below the pre-defined significance value of 0.05 and therefore rejects the null hypothesis that the means are statistically similar. With the null hypothesis rejected it can be said that the sample mean, and population mean are statistically dissimilar.  
+
+PART 4 – Design Your Own Study
+
+When designing a study to understand how customers view the performance of a new product it is crucial to understand the benchmarks that contribute to overall customer satisfaction. According to the American Customer Satisfaction Survey which surveys approximately 300,000 Americans each year, customer satisfaction in the Automobile industry for 2019 is down 3.7% over the previous year. Participants in the survey listed quality, value, and driver experience as the key indicators for the drop in satisfaction(ACSI, 2019, Retrieved from https://www.theacsi.org/industries/manufacturing/automobile).  With this in mind, management has requested assistance in developing a statistical study to compare the performance of the MechaCar prototype with the competitors. 
+ 
+The auto industry’s overall customer satisfaction with dependability (engine, parts, breakdowns) fell 1% in 2019 over 2018 making it the area of focus for MechaCar’s statistical study. This study will test whether there is a correlation between manufacturing cost, manufacturing location, and dependability.  To accomplish this, an Analysis of Variance (ANOVA) test will be used to compare each manufacturer’s dependability mean based on the cost of manufacture, and location of manufacture. 
+
+The study will test the null hypothesis that the means of dependability are statistically similar across manufacturing regions and manufacturing cost. If the study returns a p-value less than the studies significance level of 0.05, the null hypothesis is rejected and the alternative hypothesis that location and cost of manufacture are statistically significant when determining customers satisfaction with vehicle dependability will be accepted. If the significance level is above 0.05, the null hypothesis cannot be rejected, and it will be concluded that manufacture location and manufacture cost are not statistically significant when determining customers satisfaction with dependability.
+
+The study will require the following data:
+-	Customer satisfaction data pertaining to the dependability of automotive brands.
+-	MechaCar’s Prototype data collection including Failure Mode Effect Analysis.
+-	Manufacture locations for all competitor vehicles.
+-	MechaCar manufacture location. 
+-	Manufacture cost for all competitor vehicles.
+-	MechaCar projected manufacture cost.
+
