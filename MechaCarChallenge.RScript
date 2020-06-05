@@ -23,8 +23,8 @@ stat.desc(coil_data$PSI)
 
 # Part 3 - Suspension Coil T-Test
 
-# Choosing a sample size of 50
-coil_sample <- coil_data %>% sample_n(50)
+# Choosing a sample size of 100
+coil_sample <- coil_data %>% sample_n(100)
 
 # Conduct the t-test using sample and population
-t.test(log10(coil_sample$PSI),mu=mean(log10(coil_data$PSI)))
+t.test(coil_sample$PSI,mu=mean(coil_data$PSI))

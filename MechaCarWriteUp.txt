@@ -44,7 +44,7 @@ Using the pastect packages’ stat.desc() function on the PSI variable, it was f
 
 PART 3 - Suspension Coil T-Test
 
-For the suspension coil t-test, a random sample of 50 PSI values was selected and found to have a t-value of 2.2367 and p-value of 0.03. The p-value is below the pre-defined significance value of 0.05 and therefore rejects the null hypothesis that the means are statistically similar. With the null hypothesis rejected it can be said that the sample mean, and population mean are statistically dissimilar.  
+For the suspension coil t-test, a random sample of 100 PSI values was selected and found to have a t-value of -0.87 and p-value of 0.38. The p-value is above the pre-defined significance value of 0.05 and therefore fails to reject the null hypothesis that the means are statistically similar. Having failed to reject the null hypothesis, it can be said that the sample mean, and population mean are statistically similar.  
 
 PART 4 – Design Your Own Study
 
