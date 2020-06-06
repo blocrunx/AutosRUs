@@ -10,7 +10,7 @@ summary(lm(mpg ~ vehicle.length + vehicle.weight + spoiler.angle + ground.cleara
 # View summary of chosen regression model based statistically significant results
 summary(lm(mpg ~ vehicle.length + ground.clearance, data = mcar))
 
-# PART 2 - Suspension Coil Summary Statistics
+# Part 2 - Suspension Coil Summary Statistics
 
 # Import coil data
 coil_data <- read.csv('Suspension_Coil.csv')
@@ -21,10 +21,9 @@ library(pastecs)
 # Get the summary statistics
 stat.desc(coil_data$PSI)
 
-# Part 3 - Suspension Coil T-Test
+# Part 3 - Suspension Coil T-Test(Assuming Suspension_Coil.csv is a sample of the population data)
 
-# Choosing a sample size of 100
-coil_sample <- coil_data %>% sample_n(100)
+t.test(coil_data$PSI,mu=1500)
 
-# Conduct the t-test using sample and population
-t.test(coil_sample$PSI,mu=mean(coil_data$PSI))
+
+
